@@ -114,6 +114,11 @@ public class HomeFragment extends Fragment {
         return view;
     }
     @Override
+    public void onStart() {
+        super.onStart();
+        submissionAdapter.notifyDataSetChanged();
+    }
+    @Override
     public void onStop() {
         super.onStop();
         submissionAdapter.notifyDataSetChanged();
@@ -124,6 +129,7 @@ public class HomeFragment extends Fragment {
     public void onPause() {
         super.onPause();
         submissionAdapter.notifyDataSetChanged();
+        submissionList.clear();
     }
 
     @Override

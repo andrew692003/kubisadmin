@@ -25,28 +25,29 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // LAYOUT
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    
 
     // FIREBASE
+    // FIREBASE UI
+    // ANDROID SUPPORT
+    // BUTTERKNIFE
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+
+    // GOOGLE AUTH
+    
+    // IMAGECROP
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile'com.squareup.picasso:picasso:2.5.2'
     compile 'com.google.firebase:firebase-core:9.2.1'
     compile 'com.google.firebase:firebase-auth:9.2.1'
     compile 'com.google.firebase:firebase-database:9.2.1'
     compile 'com.google.firebase:firebase-storage:9.2.1'
-    // FIREBASE UI
     compile 'com.firebaseui:firebase-ui-auth:0.4.3'
-    // ANDROID SUPPORT
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:support-v4:23.4.0'
-    // BUTTERKNIFE
     compile 'com.jakewharton:butterknife:8.2.0'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
-
-    // GOOGLE AUTH
     compile 'com.google.android.gms:play-services-auth:9.2.1'
-
-    // IMAGECROP
     compile 'com.theartofdev.edmodo:android-image-cropper:2.2.5'
 }
 apply plugin: 'com.google.gms.google-services'

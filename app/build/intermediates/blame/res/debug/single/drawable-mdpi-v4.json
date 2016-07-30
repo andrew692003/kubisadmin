@@ -8,6 +8,10 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-mdpi-v4\\common_plus_signin_btn_icon_dark_disabled.9.png"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_reject.png",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-mdpi\\ic_action_reject.png"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
     },
@@ -172,6 +176,10 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-mdpi\\ic_insert_comment_white_18dp.png"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_accept.png",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-mdpi\\ic_action_accept.png"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
     },
@@ -306,6 +314,10 @@
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal.9.png",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_name.png",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-mdpi\\ic_action_name.png"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",

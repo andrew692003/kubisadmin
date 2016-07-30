@@ -4,44 +4,30 @@
     api-level="21"
     density="hdpi"
     format="7"
-    timestamp="1616750101887168"
-    verifier="COMPATIBLE" >
+    timestamp="1617965180906542"
+    token="4776200452225940239" >
 
     <task
         name="javac"
-        duration="955" />
+        duration="950" />
     <task
         name="instant-run-dex"
-        duration="474" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="15" />
+        duration="22" />
     <task
         name="verifier"
         duration="2" />
 
     <artifact
-        location="D:\GitHub\kubisadmin\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="D:\GitHub\kubisadmin\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="1616454929018819" >
+    <build timestamp="1617965180906542" >
         <artifact
             location="D:\GitHub\kubisadmin\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="1616539728309504"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\GitHub\kubisadmin\app\build\intermediates\builds\debug\1616539728309504\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="1616750101887168"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\GitHub\kubisadmin\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
