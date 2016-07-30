@@ -52,6 +52,10 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promoted_user.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\fragment_promoted_user.xml"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\delete_credential.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.firebaseui\\firebase-ui-auth\\0.4.3\\res\\layout\\delete_credential.xml"
     },
@@ -200,6 +204,10 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\welcome_back_password_prompt_layout.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.firebaseui\\firebase-ui-auth\\0.4.3\\res\\layout\\welcome_back_password_prompt_layout.xml"
     },
@@ -208,8 +216,8 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_promote_user.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\activity_promote_user.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
@@ -238,6 +246,10 @@
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\light_divider.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\light_divider.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\crop_image_view.xml",

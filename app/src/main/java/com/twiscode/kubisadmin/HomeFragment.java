@@ -56,14 +56,23 @@ public class HomeFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         fragmentManager = getFragmentManager();
         submissionAdapter=new SubmissionAdapter(getActivity(),submissionList);
-        submissionView.setAdapter(submissionAdapter);
+
         database.child("startups").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Startup startup= dataSnapshot.getValue(Startup.class);
-                submissionList.add(startup);
-                key.add(dataSnapshot.getKey());
+                final Startup startup= dataSnapshot.getValue(Startup.class);
+                String keysnap = dataSnapshot.getKey();
+                if(!submissionList.contains(startup)) {
+                    submissionList.add(startup);
+                    key.add(dataSnapshot.getKey());
+                }
+                else
+                {
+                    submissionList.remove(startup);
+                }
+                submissionView.setAdapter(submissionAdapter);
                 submissionAdapter.notifyDataSetChanged();
+
             }
 
             @Override
@@ -104,5 +113,22 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+    @Override
+    public void onStop() {
+        super.onStop();
+        submissionAdapter.notifyDataSetChanged();
+    }
+    // [END on_stop_remove_listener]
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        submissionAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        submissionAdapter.notifyDataSetChanged();
+    }
 }
