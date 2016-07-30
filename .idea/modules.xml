@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/KubisAdmin.iml" filepath="$PROJECT_DIR$/KubisAdmin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kubisadmin.iml" filepath="$PROJECT_DIR$/kubisadmin.iml" />
     </modules>
   </component>
 </project>

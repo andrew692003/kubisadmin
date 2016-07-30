@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\menu\\drawer_shop_main.xml",
-        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\menu\\drawer_shop_main.xml"
+        "merged": "D:\\Ricky\\KubisAdmin\\app\\build\\intermediates\\res\\merged\\debug\\menu\\drawer_shop_main.xml",
+        "source": "D:\\Ricky\\KubisAdmin\\app\\src\\main\\res\\menu\\drawer_shop_main.xml"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\menu\\crop_image_menu.xml",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.theartofdev.edmodo\\android-image-cropper\\2.2.5\\res\\menu\\crop_image_menu.xml"
+        "merged": "D:\\Ricky\\KubisAdmin\\app\\build\\intermediates\\res\\merged\\debug\\menu\\crop_image_menu.xml",
+        "source": "D:\\Ricky\\KubisAdmin\\app\\build\\intermediates\\exploded-aar\\com.theartofdev.edmodo\\android-image-cropper\\2.2.5\\res\\menu\\crop_image_menu.xml"
     }
 ]
