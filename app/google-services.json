@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "615935212797",
+    "firebase_url": "https://startup-hunt-2dbeb.firebaseio.com",
+    "project_id": "startup-hunt-2dbeb",
+    "storage_bucket": "startup-hunt-2dbeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615935212797:android:173d11bcb3485aef",
+        "android_client_info": {
+          "package_name": "com.twiscode.startuphunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615935212797-7ekdqjv95sdc6fbnbsnip0s1g42cirbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twiscode.startuphunt",
+            "certificate_hash": "5D55D650A95D293A22EEE2C9BF06CE85AD2D87A9"
+          }
+        },
+        {
+          "client_id": "615935212797-ajbq4h2etkn1b3cdafcbfi1viu1hetcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5N9IEZyMPWBaliMjVAPIvSH2EXLUtaek"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615935212797-ajbq4h2etkn1b3cdafcbfi1viu1hetcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615935212797:android:1cb5512d3adf600e",
+        "android_client_info": {
+          "package_name": "com.twiscode.kubisadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615935212797-ajbq4h2etkn1b3cdafcbfi1viu1hetcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5N9IEZyMPWBaliMjVAPIvSH2EXLUtaek"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

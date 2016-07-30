@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.twiscode.kubisadmin.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_user_creation"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/tall_margin"
+            android:paddingLeft="@dimen/wide_margin"
+            android:paddingRight="@dimen/wide_margin"
+            android:paddingTop="@dimen/tall_margin">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfilePicture"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/avatar"
+                app:civ_border_color="@color/md_white_1000"
+                app:civ_border_width="3dp"/>
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello Andree,"
+                android:textColor="@color/md_white_1000"
+                android:layout_marginTop="@dimen/vertical_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One more step to complete your profile"
+                android:textColor="@color/md_white_1000"
+                android:layout_marginTop="@dimen/short_margin"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/tall_margin"
+        android:paddingLeft="@dimen/wide_margin"
+        android:paddingRight="@dimen/wide_margin"
+        android:paddingTop="@dimen/tall_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textAllCaps="true"
+            android:textColor="@color/fresh_green"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-17dp"
+            android:layout_marginRight="-17dp"
+            android:paddingTop="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin"
+            android:textColorHint="@color/md_grey_500"
+            android:hint="Create new username"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tall_margin"
+            android:text="Description"
+            android:textAllCaps="true"
+            android:textColor="@color/fresh_green"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/md_grey_500"
+            android:hint="Describe a little about yourself"
+            android:paddingTop="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin"
+            android:layout_marginLeft="-17dp"
+            android:layout_marginRight="-17dp"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tall_margin"
+            android:text="Done"
+            android:textColor="@color/md_white_1000"
+            android:background="@color/lime_green"/>
+
+    </LinearLayout>
+
+</LinearLayout>
