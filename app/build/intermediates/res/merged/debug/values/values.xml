@@ -656,8 +656,9 @@
     <string name="action_login">Login</string>
     <string name="action_logout">Logout</string>
     <string name="action_logout_confirm">Are you sure?</string>
+    <string name="action_powered">Powered by Twiscode</string>
     <string name="action_settings">Settings</string>
-    <string name="action_title">Startup Community</string>
+    <string name="action_title">KUBIS</string>
     <string name="app_name">Kubis Admin</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>

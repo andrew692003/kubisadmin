@@ -17,13 +17,13 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/kubis"
+            android:src="@drawable/admin"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
             android:id="@+id/imageView" />
 
         <TextView
-            android:textSize="18dp"
+            android:textSize="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/action_title"
@@ -39,7 +39,13 @@
             android:layout_height="55dp"
             android:layout_marginTop="100dp"/>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="160dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/action_powered"/>
 
     </LinearLayout>
 </ScrollView>

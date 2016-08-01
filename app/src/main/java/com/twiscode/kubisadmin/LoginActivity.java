@@ -61,8 +61,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance().getReference();
         pDialog = new ProgressDialog(this);
-        pDialog.setTitle("Loading");
-        pDialog.setMessage("Signing in...");
         pDialog.setCancelable(false);
         // [START config_signin]
         // Configure Google Sign In

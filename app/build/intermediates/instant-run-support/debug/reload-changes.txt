@@ -1,2 +1,11 @@
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\R$layout$override.class
 CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\HomeFragment$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\theartofdev\edmodo\cropper\R$layout$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\design\R$layout$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\R$styleable$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$layout$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\R$style$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\R$mipmap$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\R$menu$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\twiscode\kubisadmin\R$string$override.class
+CHANGED,D:\GitHub\kubisadmin\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\firebase\ui\auth\R$layout$override.class

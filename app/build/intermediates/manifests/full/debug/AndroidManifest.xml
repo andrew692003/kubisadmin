@@ -23,7 +23,7 @@
     <application
         android:name="com.twiscode.kubisadmin.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/kubis_admin"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar" >
@@ -41,6 +41,7 @@
         <activity android:name="com.twiscode.kubisadmin.StartupDetailActivity" />
         <activity android:name="com.twiscode.kubisadmin.RegisterActivity" />
         <activity android:name="com.twiscode.kubisadmin.PromoteUserActivity" />
+        <activity android:name="com.twiscode.kubisadmin.ProfileUserActivity" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

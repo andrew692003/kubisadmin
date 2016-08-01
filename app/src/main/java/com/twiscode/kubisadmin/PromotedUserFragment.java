@@ -1,6 +1,7 @@
 package com.twiscode.kubisadmin;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -33,7 +34,12 @@ public class PromotedUserFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_promoted_user, container, false);
         ButterKnife.bind(this, view);
-
+        promoteUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PromoteUserActivity.class));
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }

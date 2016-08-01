@@ -6,12 +6,12 @@ import java.util.ArrayList;
  * Created by Crusader on 7/29/2016.
  */
 public class Startup {
-    String creatorId,description,linkUrl,name;
+    String creatorId,description,linkUrl,name,thumbnail;
     Boolean status,isDisplayed;
     ArrayList<String> founder,hashtag,imageUrl,upvoters;
     Long timestamp;
 
-    public Startup(String creatorId,String description,String linkUrl,String name, ArrayList<String> founder, ArrayList<String> hashtag, ArrayList<String> imageUrl, ArrayList<String> upvoters, Boolean status, Boolean isDisplayed, Long timestamp)
+    public Startup(String creatorId,String description,String linkUrl,String name, ArrayList<String> founder, ArrayList<String> hashtag, ArrayList<String> imageUrl, ArrayList<String> upvoters, Boolean status, Boolean isDisplayed, Long timestamp, String thumbnail)
     {
         this.creatorId=creatorId;
         this.description=description;
@@ -24,6 +24,7 @@ public class Startup {
         this.status=status;
         this.isDisplayed=isDisplayed;
         this.timestamp=timestamp;
+        this.thumbnail=thumbnail;
     }
     public Startup()
     {
@@ -116,5 +117,13 @@ public class Startup {
 
     public Long getTimestamp() {
         return timestamp;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
     }
 }

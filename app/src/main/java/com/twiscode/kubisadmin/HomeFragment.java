@@ -5,21 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.twiscode.kubisadmin.Adapter.SubmissionAdapter;
+import com.twiscode.kubisadmin.Adapter.ListAdapterSubmission;
 import com.twiscode.kubisadmin.POJO.Startup;
 
 import java.util.ArrayList;
@@ -37,7 +34,7 @@ public class HomeFragment extends Fragment {
     ListView submissionView;
     ArrayList<Startup> submissionList = new ArrayList<Startup>();
     ArrayList<String> key = new ArrayList<String>();
-    SubmissionAdapter submissionAdapter;
+    ListAdapterSubmission submissionAdapter;
     DatabaseReference database;
     FirebaseAuth mAuth;
     FragmentManager fragmentManager;
@@ -55,86 +52,67 @@ public class HomeFragment extends Fragment {
         database = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
         fragmentManager = getFragmentManager();
-        submissionAdapter=new SubmissionAdapter(getActivity(),submissionList);
+//        Query mRef, Class<Startup> mModelClass, int mLayout, Activity activity, Context context
+        submissionAdapter=new ListAdapterSubmission(database.child("startups"),Startup.class,R.layout.item_submission,getActivity(),getContext());
+        submissionView.setAdapter(submissionAdapter);
 
-        database.child("startups").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                final Startup startup= dataSnapshot.getValue(Startup.class);
-                String keysnap = dataSnapshot.getKey();
-                if(!submissionList.contains(startup)) {
-                    submissionList.add(startup);
-                    key.add(dataSnapshot.getKey());
-                }
-                else
-                {
-                    submissionList.remove(startup);
-                }
-                submissionView.setAdapter(submissionAdapter);
-                submissionAdapter.notifyDataSetChanged();
-
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-                Startup startup = dataSnapshot.getValue(Startup.class);
-                submissionList.remove(startup);
-                key.remove(dataSnapshot.getKey());
-                submissionAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        database.child("startups").addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+//                final Startup startup= dataSnapshot.getValue(Startup.class);
+//                String keysnap = dataSnapshot.getKey();
+//                if(!submissionList.contains(startup)) {
+//                    submissionList.add(startup);
+//                    key.add(dataSnapshot.getKey());
+//                }
+//                else
+//                {
+//                    submissionList.remove(startup);
+//                }
+//                submissionView.setAdapter(submissionAdapter);
+//                submissionAdapter.notifyDataSetChanged();
+//
+//            }
+//
+//            @Override
+//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(DataSnapshot dataSnapshot) {
+//                Startup startup = dataSnapshot.getValue(Startup.class);
+//                submissionList.remove(startup);
+//                key.remove(dataSnapshot.getKey());
+//                submissionAdapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
         if(submissionView != null)
         {
             submissionView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-                    Startup select = (Startup) submissionView.getItemAtPosition(position);
+                    //Startup select = (Startup) submissionView.getItemAtPosition(position);
                     Intent j = new Intent(getActivity(), StartupDetailActivity.class);
-                    j.putExtra("key", key.get(position));
+                    String keynow = ((Pair<Startup, String>)parent.getItemAtPosition(position)).second;
+                    j.putExtra("key", keynow);
+//                    Log.v("key", String.valueOf(parent.getItemIdAtPosition(position)));
+//                    j.putExtra("key", parent.getItemIdAtPosition(position));
                     startActivityForResult(j, 1);
                 }
             });
         }
         // Inflate the layout for this fragment
         return view;
-    }
-    @Override
-    public void onStart() {
-        super.onStart();
-        submissionAdapter.notifyDataSetChanged();
-    }
-    @Override
-    public void onStop() {
-        super.onStop();
-        submissionAdapter.notifyDataSetChanged();
-    }
-    // [END on_stop_remove_listener]
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        submissionAdapter.notifyDataSetChanged();
-        submissionList.clear();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        submissionAdapter.notifyDataSetChanged();
     }
 }
