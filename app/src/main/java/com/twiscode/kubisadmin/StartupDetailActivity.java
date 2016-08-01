@@ -76,8 +76,8 @@ public class StartupDetailActivity extends AppCompatActivity {
         if(viewPager != null) {
             DetailPagerAdapter adapter = new DetailPagerAdapter(getSupportFragmentManager());
             adapter.addFragment(new StartupDiscussionFragment(), "Discussion");
-            adapter.addFragment(new StartupDiscussionFragment(), "Information");
-            adapter.addFragment(new StartupDiscussionFragment(), "Media");
+            adapter.addFragment(new StartupInfoFragment(), "Information");
+            adapter.addFragment(new StartupMediaFragment(), "Media");
             adapter.addFragment(new StartupDiscussionFragment(), "Similar");
             viewPager.setAdapter(adapter);
         }
@@ -85,33 +85,39 @@ public class StartupDetailActivity extends AppCompatActivity {
         // TABLAYOUT
         tabLayout.setupWithViewPager(viewPager);
 
+        btnDec.setVisibility(View.GONE);
+        btnAcc.setVisibility(View.GONE);
+
         database.child("startupstatus").child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.e("DATASNAP",dataSnapshot.toString());
                 Boolean status=(Boolean)dataSnapshot.getValue();
-                if(!status)
+                if(status==null)
                 {
-
-                    btnAcc.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            database.child("startupstatus").child(key).setValue(true);
-                        }
-                    });
                     btnDec.setVisibility(View.GONE);
                     btnAcc.setVisibility(View.GONE);
                 }
                 else
                 {
-
-                    btnDec.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            database.child("startupstatus").child(key).setValue(false);
-                        }
-                    });
+                    btnDec.setVisibility(View.VISIBLE);
+                    btnAcc.setVisibility(View.VISIBLE);
                 }
+
+                btnAcc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        database.child("startupstatus").child(key).setValue(true);
+                    }
+                });
+
+                btnDec.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        database.child("startupstatus").child(key).setValue(false);
+                    }
+                });
+
                 Log.v("STATUS", String.valueOf(status));
             }
 

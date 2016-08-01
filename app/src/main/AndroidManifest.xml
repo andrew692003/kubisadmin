@@ -24,7 +24,9 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".StartupDetailActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".SearchUserActivity" />
+        <activity android:name=".SuggestionDetailActivity"></activity>
     </application>
 
 </manifest>

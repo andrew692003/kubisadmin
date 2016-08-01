@@ -40,6 +40,8 @@
         <activity android:name="com.twiscode.kubisadmin.HomeActivity" />
         <activity android:name="com.twiscode.kubisadmin.StartupDetailActivity" />
         <activity android:name="com.twiscode.kubisadmin.RegisterActivity" />
+        <activity android:name="com.twiscode.kubisadmin.SearchUserActivity" />
+        <activity android:name="com.twiscode.kubisadmin.SuggestionDetailActivity" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

@@ -25,7 +25,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // LAYOUT
-    
 
     // FIREBASE
     // FIREBASE UI
@@ -34,10 +33,10 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
 
     // GOOGLE AUTH
-    
+
     // IMAGECROP
     compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.google.firebase:firebase-core:9.2.1'
     compile 'com.google.firebase:firebase-auth:9.2.1'
     compile 'com.google.firebase:firebase-database:9.2.1'

@@ -1,0 +1,152 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.twiscode.startuphunt.DetailInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Founder"/>
+
+            <com.twiscode.startuphunt.ExpandableHeightGridView
+                android:id="@+id/gridFounder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:numColumns="5"
+                android:verticalSpacing="@dimen/short_margin"
+                android:horizontalSpacing="@dimen/narrow_margin"
+                android:layout_marginTop="@dimen/short_margin"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/divider_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upvotes"/>
+
+            <com.twiscode.startuphunt.ExpandableHeightGridView
+                android:id="@+id/gridUpvotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:numColumns="5"
+                android:verticalSpacing="@dimen/short_margin"
+                android:horizontalSpacing="@dimen/narrow_margin"
+                android:layout_marginTop="@dimen/short_margin"/>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="56dp"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:src="@drawable/chorong"-->
+            <!--android:layout_marginTop="@dimen/short_margin"-->
+            <!--android:layout_marginRight="@dimen/narrow_margin"-->
+            <!--app:civ_border_width="1dp"-->
+            <!--app:civ_border_color="@color/md_grey_300"/>-->
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="56dp"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:src="@drawable/chorong"-->
+            <!--android:layout_marginTop="@dimen/short_margin"-->
+            <!--android:layout_marginRight="@dimen/narrow_margin"-->
+            <!--app:civ_border_width="1dp"-->
+            <!--app:civ_border_color="@color/md_grey_300"/>-->
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="56dp"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:src="@drawable/chorong"-->
+            <!--android:layout_marginTop="@dimen/short_margin"-->
+            <!--android:layout_marginRight="@dimen/narrow_margin"-->
+            <!--app:civ_border_width="1dp"-->
+            <!--app:civ_border_color="@color/md_grey_300"/>-->
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="56dp"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:src="@drawable/chorong"-->
+            <!--android:layout_marginTop="@dimen/short_margin"-->
+            <!--android:layout_marginRight="@dimen/narrow_margin"-->
+            <!--app:civ_border_width="1dp"-->
+            <!--app:civ_border_color="@color/md_grey_300"/>-->
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="56dp"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:src="@drawable/chorong"-->
+            <!--android:layout_marginTop="@dimen/short_margin"-->
+            <!--android:layout_marginRight="@dimen/narrow_margin"-->
+            <!--app:civ_border_width="1dp"-->
+            <!--app:civ_border_color="@color/md_grey_300"/>-->
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="48dp"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:src="@drawable/chorong"-->
+            <!--android:layout_marginTop="@dimen/short_margin"-->
+            <!--android:layout_marginRight="@dimen/narrow_margin"-->
+            <!--app:civ_border_width="1dp"-->
+            <!--app:civ_border_color="@color/md_grey_300"/>-->
+
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+        <include layout="@layout/divider_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/vertical_margin"
+            android:paddingBottom="@dimen/vertical_margin"
+            android:paddingLeft="@dimen/horizontal_margin"
+            android:paddingRight="@dimen/horizontal_margin">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tags"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

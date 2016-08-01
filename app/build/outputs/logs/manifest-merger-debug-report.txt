@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:2:1-32:12
 	xmlns:tools
 		ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
@@ -23,7 +23,7 @@ MERGED from [com.google.firebase:firebase-iid:9.2.1] D:\Ricky\KubisAdmin\app\bui
 	android:name
 		ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:8:5-28:19
+ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:8:5-30:19
 MERGED from [de.hdodenhof:circleimageview:2.1.0] D:\Ricky\KubisAdmin\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-core:9.2.1] D:\Ricky\KubisAdmin\app\build\intermediates\exploded-aar\com.google.firebase\firebase-core\9.2.1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:9.2.1] D:\Ricky\KubisAdmin\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.2.1\AndroidManifest.xml:26:5-41:19
@@ -330,9 +330,17 @@ ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:26:9-59
 	android:name
 		ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:26:19-56
 activity#com.twiscode.kubisadmin.RegisterActivity
-ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:27:9-63
+ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:27:9-54
 	android:name
 		ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:27:19-51
+activity#com.twiscode.kubisadmin.SearchUserActivity
+ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:28:9-56
+	android:name
+		ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:28:19-53
+activity#com.twiscode.kubisadmin.SuggestionDetailActivity
+ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:29:9-71
+	android:name
+		ADDED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml:29:19-59
 uses-sdk
 INJECTED from D:\Ricky\KubisAdmin\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [de.hdodenhof:circleimageview:2.1.0] D:\Ricky\KubisAdmin\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\AndroidManifest.xml:5:5-7:41

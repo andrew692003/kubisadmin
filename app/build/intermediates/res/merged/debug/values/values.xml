@@ -379,6 +379,7 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="red">#FF0000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -652,6 +653,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="account_welcomeback">Welcome back</string>
+    <string name="action_go_to_profile"><u>Go to profile ></u></string>
     <string name="action_login">Login</string>
     <string name="action_logout">Logout</string>
     <string name="action_settings">Settings</string>
