@@ -90,15 +90,24 @@ public final class R {
 		public static final int button = 0x7f0c004f;
 		public static final int center = 0x7f0c0022;
 		public static final int dark = 0x7f0c0047;
+<<<<<<< HEAD
 		public static final int email = 0x7f0c00c2;
+=======
+		public static final int email = 0x7f0c00be;
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
 		public static final int icon_only = 0x7f0c0044;
 		public static final int light = 0x7f0c0048;
 		public static final int none = 0x7f0c0010;
 		public static final int normal = 0x7f0c000c;
 		public static final int radio = 0x7f0c0070;
 		public static final int standard = 0x7f0c0045;
+<<<<<<< HEAD
 		public static final int text = 0x7f0c00da;
 		public static final int text2 = 0x7f0c00d8;
+=======
+		public static final int text = 0x7f0c00d6;
+		public static final int text2 = 0x7f0c00d4;
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
 		public static final int wide = 0x7f0c0046;
 		public static final int wrap_content = 0x7f0c0020;
 	}

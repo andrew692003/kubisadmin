@@ -3,11 +3,13 @@ package com.twiscode.kubisadmin;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -62,7 +64,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
-        reqPermission();
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            reqPermission();
+        }
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         usersRef = FirebaseDatabase.getInstance().getReference().child("users");
@@ -77,17 +81,37 @@ public class RegisterActivity extends AppCompatActivity {
             btnDone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if(!validateForm()) return;
                     if(selectedImage!=null) {
+                        User newUser = new User();
+                        newUser.setUid(mUser.getUid());
+                        newUser.setName(mUser.getDisplayName());
+                        newUser.setImageUrl(selectedImage.toString());
+                        newUser.setUsername(etUsername.getText().toString());
+                        newUser.setDescription(etDescription.getText().toString());
+
+                        usersRef.child(mUser.getUid()).setValue(newUser, new DatabaseReference.CompletionListener() {
+                            @Override
+                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                if (databaseError == null) {
+                                    intentlain();
+                                } else {
+                                    Toast.makeText(RegisterActivity.this, databaseError.toString(), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                    else if(hasilUpload!=null){
                         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
-                        StorageReference riversRef = storageRef.child("images/" + selectedImage.getLastPathSegment()+timeStamp);
-                        UploadTask uploadTask = riversRef.putFile(selectedImage);
+                        StorageReference riversRef = storageRef.child("images/" + hasilUpload.getLastPathSegment()+timeStamp);
+                        UploadTask uploadTask = riversRef.putFile(hasilUpload);
 
                         uploadTask.addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception exception) {
                                 // Handle unsuccessful uploads
                                 Toast.makeText(RegisterActivity.this, "Upload image failed.", Toast.LENGTH_SHORT).show();
-                                selectedImage=null;
+                                hasilUpload=null;
                             }
                         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                             @Override
@@ -105,9 +129,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                                         if (databaseError == null) {
-                                            Intent resultIntent = new Intent();
-                                            setResult(RESULT_OK, resultIntent);
-                                            finish();
+                                            intentlain();
                                         } else {
                                             Toast.makeText(RegisterActivity.this, databaseError.toString(), Toast.LENGTH_SHORT).show();
                                         }
@@ -115,7 +137,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 });
                             }
                         });
-
                     }
                     else
                     {
@@ -144,7 +165,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
-                selectedImage = result.getUri();
+                selectedImage = null;
                 hasilUpload = result.getUri();
                 Picasso.with(this).load(hasilUpload).into(civProfilePicture);
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
@@ -152,14 +173,11 @@ public class RegisterActivity extends AppCompatActivity {
                 Exception error = result.getError();
                 hasilUpload=null;
             }
-            else
-            {
-                hasilUpload=null;
+            else{
+                if(selectedImage!=null) {
+                    Picasso.with(this).load(selectedImage).into(civProfilePicture);
+                }
             }
-        }
-        else
-        {
-            hasilUpload=null;
         }
         if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
             hasilUpload = data.getData();
@@ -170,6 +188,13 @@ public class RegisterActivity extends AppCompatActivity {
                     .setAspectRatio(150,150)
                     .start(this);
         }
+    }
+
+    private void intentlain(){
+        Intent loginIntent = new Intent(this, MainActivity.class);
+        loginIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(loginIntent);
+        finish();
     }
 
     public void reqPermission()
@@ -220,5 +245,19 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
         }
+    }
+
+    private boolean validateForm() {
+        boolean valid = true;
+
+        String isiusername = etUsername.getText().toString();
+        if (TextUtils.isEmpty(isiusername)) {
+            etUsername.setError("Required.");
+            valid = false;
+        } else {
+            etUsername.setError(null);
+        }
+
+        return valid;
     }
 }

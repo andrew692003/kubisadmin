@@ -3,6 +3,7 @@ package com.twiscode.kubisadmin;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -54,9 +55,15 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this, this);
-        reqPermission();
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            reqPermission();
+        }
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance().getReference();
+        pDialog = new ProgressDialog(this);
+        pDialog.setTitle("Loading");
+        pDialog.setMessage("Signing in...");
+        pDialog.setCancelable(false);
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -114,6 +121,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private void firebaseAuthWithGoogle(final GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+        //Log.v("acctId",acct.getId());
         // [START_EXCLUDE silent]
         pDialog.show();
         // [END_EXCLUDE]
@@ -135,14 +143,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                     Toast.LENGTH_SHORT).show();
                             pDialog.dismiss();
                         } else {
-                            database.child("users").child(acct.getId()).addListenerForSingleValueEvent(new ValueEventListener() {
+                            database.child("users").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     if(dataSnapshot.exists()){
                                         intentHomeactivity();
+                                        pDialog.dismiss();
                                     }
                                     else{
                                         intentRegisteractivity();
+                                        pDialog.dismiss();
                                     }
                                 }
 
@@ -151,7 +161,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
                                 }
                             });
-                            pDialog.dismiss();
                         }
                         // [START_EXCLUDE]
                         // [END_EXCLUDE]

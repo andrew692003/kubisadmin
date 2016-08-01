@@ -25,8 +25,12 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".StartupDetailActivity" />
         <activity android:name=".RegisterActivity" />
+<<<<<<< HEAD
         <activity android:name=".SearchUserActivity" />
         <activity android:name=".SuggestionDetailActivity"></activity>
+=======
+        <activity android:name=".PromoteUserActivity"></activity>
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
     </application>
 
 </manifest>
