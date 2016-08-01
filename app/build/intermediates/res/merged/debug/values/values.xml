@@ -653,6 +653,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="account_welcomeback">Welcome back</string>
+    <string name="action_go_to_profile"><u>Go to profile ></u></string>
     <string name="action_login">Login</string>
     <string name="action_logout">Logout</string>
     <string name="action_logout_confirm">Are you sure?</string>
@@ -801,7 +802,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="editTextStyle">@style/CustomEditTextStyle</item>
         <item name="android:textAppearanceSmall">@style/AppTheme.TextAppearance.Small</item>
@@ -819,7 +820,7 @@
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <!--<item name="android:windowBackground">@color/material_green_50</item>-->
     </style>

@@ -1,7 +1,9 @@
 package com.twiscode.kubisadmin;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Pair;
@@ -35,6 +37,8 @@ public class SuggestionFragment extends Fragment {
     DatabaseReference database;
     FirebaseAuth mAuth;
 
+    ProgressDialog mAuthProgressDialog;
+
     public SuggestionFragment() {
         // Required empty public constructor
     }
@@ -43,19 +47,32 @@ public class SuggestionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        mAuthProgressDialog = new ProgressDialog(getContext());
+        mAuthProgressDialog.setTitle("Loading");
+        mAuthProgressDialog.setMessage("Please Wait...");
+        mAuthProgressDialog.setCancelable(false);
+        mAuthProgressDialog.show();
         View view = inflater.inflate(R.layout.fragment_suggestion, container, false);
         ButterKnife.bind(this, view);
         database = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
         listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class);
+        listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
+            @Override
+            public void onChanged() {
+                super.onChanged();
+                mAuthProgressDialog.dismiss();
+            }
+        });
         listSuggest.setAdapter(listAdapterSuggestion);
+        listAdapterSuggestion.notifyDataSetChanged();
         if(listSuggest != null)
         {
             listSuggest.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
                     //Startup select = (Startup) submissionView.getItemAtPosition(position);
-                    Intent j = new Intent(getActivity(), StartupDetailActivity.class);
+                    Intent j = new Intent(getActivity(), SuggestionDetailActivity.class);
                     String keynow = ((Pair<Request, String>)parent.getItemAtPosition(position)).second;
                     j.putExtra("key", keynow);
 //                    Log.v("key", String.valueOf(parent.getItemIdAtPosition(position)));
@@ -68,4 +85,32 @@ public class SuggestionFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class);
+        listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
+            @Override
+            public void onChanged() {
+                super.onChanged();
+                mAuthProgressDialog.dismiss();
+            }
+        });
+        listSuggest.setAdapter(listAdapterSuggestion);
+        listAdapterSuggestion.notifyDataSetChanged();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class);
+        listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
+            @Override
+            public void onChanged() {
+                super.onChanged();
+                mAuthProgressDialog.dismiss();
+            }
+        });
+        listSuggest.setAdapter(listAdapterSuggestion);
+        listAdapterSuggestion.notifyDataSetChanged();
+    }
 }

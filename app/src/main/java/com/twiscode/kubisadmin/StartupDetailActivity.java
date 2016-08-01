@@ -1,5 +1,6 @@
 package com.twiscode.kubisadmin;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.opengl.Visibility;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -52,6 +54,7 @@ public class StartupDetailActivity extends AppCompatActivity {
     FloatingActionButton btnDec;
 
     String key;
+    ProgressDialog mAuthProgressDialog;
 
     DatabaseReference database;
 
@@ -64,6 +67,11 @@ public class StartupDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         key=intent.getStringExtra("key");
         Log.e("KEY",key);
+        mAuthProgressDialog = new ProgressDialog(this);
+        mAuthProgressDialog.setTitle("Loading");
+        mAuthProgressDialog.setMessage("Please Wait...");
+        mAuthProgressDialog.setCancelable(false);
+        mAuthProgressDialog.show();
 
         ButterKnife.bind(this);
 
@@ -76,8 +84,8 @@ public class StartupDetailActivity extends AppCompatActivity {
         if(viewPager != null) {
             DetailPagerAdapter adapter = new DetailPagerAdapter(getSupportFragmentManager());
             adapter.addFragment(new StartupDiscussionFragment(), "Discussion");
-            adapter.addFragment(new StartupDiscussionFragment(), "Information");
-            adapter.addFragment(new StartupDiscussionFragment(), "Media");
+            adapter.addFragment(new StartupInfoFragment(), "Information");
+            adapter.addFragment(new StartupMediaFragment(), "Media");
             adapter.addFragment(new StartupDiscussionFragment(), "Similar");
             viewPager.setAdapter(adapter);
         }
@@ -85,33 +93,39 @@ public class StartupDetailActivity extends AppCompatActivity {
         // TABLAYOUT
         tabLayout.setupWithViewPager(viewPager);
 
+        btnDec.setVisibility(View.GONE);
+        btnAcc.setVisibility(View.GONE);
+
         database.child("startupstatus").child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.e("DATASNAP",dataSnapshot.toString());
+                //Log.e("DATASNAP",dataSnapshot.toString());
                 Boolean status=(Boolean)dataSnapshot.getValue();
-                if(!status)
+                if(status==null)
                 {
-
-                    btnAcc.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            database.child("startupstatus").child(key).setValue(true);
-                        }
-                    });
-                    btnDec.setVisibility(View.GONE);
-                    btnAcc.setVisibility(View.GONE);
+                    btnDec.setVisibility(View.VISIBLE);
+                    btnAcc.setVisibility(View.VISIBLE);
                 }
                 else
                 {
-
-                    btnDec.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            database.child("startupstatus").child(key).setValue(false);
-                        }
-                    });
+                    btnDec.setVisibility(View.GONE);
+                    btnAcc.setVisibility(View.GONE);
                 }
+
+                btnAcc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        database.child("startupstatus").child(key).setValue(true);
+                    }
+                });
+
+                btnDec.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        database.child("startupstatus").child(key).setValue(false);
+                    }
+                });
+                mAuthProgressDialog.dismiss();
                 Log.v("STATUS", String.valueOf(status));
             }
 
@@ -151,6 +165,20 @@ public class StartupDetailActivity extends AppCompatActivity {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                //Intent j = new Intent(ChatActivity2.this, LobbyChatActivity.class);
+                //j.putExtra("username",mUsername);
+                //startActivity(j);
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /*

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageSuggest"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:src="@drawable/chorong"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="Chorong"
+        android:id="@+id/suggestName"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageSuggest"
+        android:textColor="@color/md_black_1000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:id="@+id/suggestDesc"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/suggestName"
+        android:layout_toEndOf="@+id/imageSuggest" />
+
+</RelativeLayout>

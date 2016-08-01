@@ -6,18 +6,18 @@ package com.twiscode.kubisadmin.POJO;
 public class User {
 
     String uid, username, name, imageUrl, description;
-    boolean admin;
+    Long status;
 
     public User() {
     }
 
-    public User(String uid, String username, String name, String imageUrl, String description, boolean admin) {
+    public User(String uid, String username, String name, String imageUrl, String description, Long status) {
         this.uid = uid;
         this.username = username;
         this.name = name;
         this.imageUrl = imageUrl;
         this.description = description;
-        this.admin = admin;
+        this.status = status;
     }
 
     public String getUid() {
@@ -60,11 +60,11 @@ public class User {
         this.description = description;
     }
 
-    public boolean isAdmin() {
-        return admin;
+    public Long getStatus() {
+        return status;
     }
 
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
+    public void setStatus(Long status) {
+        this.status = status;
     }
 }

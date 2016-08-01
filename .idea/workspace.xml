@@ -2,24 +2,13 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config>
-        <target>android-23</target>
-      </config>
+      <config />
     </shared>
-    <layouts>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_startup_detail.xml">
-        <config>
-          <theme>@style/AppTheme.NoActionBar</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/drawer_shop_main.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
-    </layouts>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="c4ce70ec-dd35-4c57-afd3-61e6ba93904b" name="Default" comment="" />
+=======
 <<<<<<< HEAD
     <list default="true" id="5d86c7b1-e915-4168-a099-e3b22d336412" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
@@ -65,6 +54,7 @@
     <ignored path="Kubis Admin.iws" />
 =======
     <list default="true" id="faada18d-5d9f-4829-9a62-aba254b4b5ae" name="Default" comment="" />
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
     <ignored path="KubisAdmin.iws" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
     <ignored path=".idea/workspace.xml" />
@@ -80,13 +70,6 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="KubisAdmin" />
   </component>
@@ -103,7 +86,15 @@
     <leaf>
       <file leaf-file-name="activity_startup_detail.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_startup_detail.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-4.6363635">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+=======
             <state vertical-scroll-proportion="-1.5454545">
               <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding>
@@ -112,13 +103,34 @@
                 <element signature="e#3481#3521#0" expanded="true" />
               </folding>
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="activity_suggestion_detail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_suggestion_detail.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="30.927273">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <folding>
+                <element signature="e#2128#2158#0" expanded="true" />
+                <element signature="e#4865#4905#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.2452831">
+              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+=======
 <<<<<<< HEAD
       <file leaf-file-name="SubmissionAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/Adapter/SubmissionAdapter.java">
@@ -132,11 +144,16 @@
             <state vertical-scroll-proportion="-9.153846">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="SuggestionDetailActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/SuggestionDetailActivity.java">
+=======
 <<<<<<< HEAD
       <file leaf-file-name="StartupDetailActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDetailActivity.java">
@@ -149,18 +166,19 @@
 =======
       <file leaf-file-name="fragment_startup_discussion.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_startup_discussion.xml">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="StartupDetailActivity.java" pinned="false" current-in-tab="true">
+=======
 <<<<<<< HEAD
       <file leaf-file-name="HomeMainFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/HomeMainFragment.java">
@@ -170,27 +188,32 @@
               <folding />
 =======
       <file leaf-file-name="StartupDetailActivity.java" pinned="false" current-in-tab="false">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5167224">
+              <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
               <folding>
-                <element signature="e#3227#3478#0" expanded="true" />
-                <element signature="e#3477#3478#0" expanded="true" />
-                <element signature="e#3691#3943#0" expanded="true" />
-                <element signature="e#3942#3943#0" expanded="true" />
-                <element signature="e#4429#4430#0" expanded="true" />
-                <element signature="e#4462#4463#0" expanded="true" />
-                <element signature="e#4513#4514#0" expanded="true" />
-                <element signature="e#4564#4565#0" expanded="true" />
-                <element signature="e#4631#4632#0" expanded="true" />
-                <element signature="e#4689#4690#0" expanded="true" />
+                <element signature="e#3593#3824#0" expanded="true" />
+                <element signature="e#3823#3824#0" expanded="true" />
+                <element signature="e#3870#4102#0" expanded="true" />
+                <element signature="e#4101#4102#0" expanded="true" />
               </folding>
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="fragment_suggestion_detail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_suggestion_detail.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
 <<<<<<< HEAD
       <file leaf-file-name="fragment_suggestion.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_suggestion.xml">
@@ -229,15 +252,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8766114">
               <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
               <folding />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="SuggestionDetailFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/SuggestionDetailFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
 <<<<<<< HEAD
       <file leaf-file-name="PromotedUserFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/PromotedUserFragment.java">
@@ -251,12 +279,19 @@
             <state vertical-scroll-proportion="-4.018182">
               <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_suggestion.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_suggestion.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+<<<<<<< HEAD
+=======
         </entry>
       </file>
 <<<<<<< HEAD
@@ -273,16 +308,26 @@
 =======
       <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.2181818">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="49" />
               <folding />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_search_user.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_user.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+<<<<<<< HEAD
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+=======
         </entry>
       </file>
 <<<<<<< HEAD
@@ -298,12 +343,19 @@
             <state vertical-scroll-proportion="-2.7818182">
               <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_submission.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_submission.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+<<<<<<< HEAD
+=======
         </entry>
       </file>
 <<<<<<< HEAD
@@ -318,15 +370,13 @@
 =======
       <file leaf-file-name="fragment_home_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home_main.xml">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state vertical-scroll-proportion="-3.709091">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="33" />
               <folding />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -1935,10 +1985,14 @@
     <option name="modificationStamps">
       <map>
 <<<<<<< HEAD
+        <entry key="$PROJECT_DIR$" value="4409723328563" />
+=======
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="4409381350227" />
 =======
         <entry key="$PROJECT_DIR$" value="4409570180953" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2305,6 +2359,14 @@
     <option name="CHANGED_PATHS">
       <list>
 <<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_search_user.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_suggestion.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_submission.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_suggestion_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDetailActivity.java" />
+=======
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/Interface/CustomToolbarActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/MyApplication.java" />
@@ -2354,6 +2416,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_submission.xml" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       </list>
     </option>
   </component>
@@ -2388,10 +2451,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2409,6 +2469,8 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
@@ -2452,6 +2514,7 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2493,24 +2556,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KubisAdmin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="317" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.twiscode.kubisadmin" />
+      <recent name="layout" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2778,10 +2840,10 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="faada18d-5d9f-4829-9a62-aba254b4b5ae" name="Default" comment="" />
-      <created>1469853890330</created>
+      <changelist id="c4ce70ec-dd35-4c57-afd3-61e6ba93904b" name="Default" comment="" />
+      <created>1470021804164</created>
       <option name="number" value="Default" />
-      <updated>1469853890330</updated>
+      <updated>1470021804164</updated>
     </task>
     <servers />
   </component>
@@ -2815,9 +2877,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2827,8 +2889,8 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2841,6 +2903,36 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2851,6 +2943,9 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_user.xml">
+=======
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/divider_light.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -2859,11 +2954,10 @@
           <folding />
         </state>
       </provider>
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/drawer_shop_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2871,15 +2965,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDiscussionFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/SearchUserActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2887,42 +2973,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDiscussionFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.703704">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.71070236">
+          <caret line="141" column="61" selection-start-line="141" selection-start-column="61" selection-end-line="141" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/HomeActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4074073">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.51544404">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_suggestion_detail.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2128#2158#0" expanded="true" />
+            <element signature="e#4865#4905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_startup_detail.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+=======
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+        <state vertical-scroll-proportion="-4.6363635">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_startup_discussion.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/SuggestionDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/MenuArrowDrawable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2948,13 +3055,20 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home_main.xml">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.2452831">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_suggestion.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+=======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_startup_detail.xml">
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
       <provider selected="true" editor-type-id="text-editor">
@@ -2995,15 +3109,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7818182">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        <state vertical-scroll-proportion="-1.2181818">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="49" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_submission.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+<<<<<<< HEAD
+=======
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/POJO/Startup.java">
@@ -3017,26 +3136,32 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home_main.xml">
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        <state vertical-scroll-proportion="-3.709091">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="33" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.018182">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search_user.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_suggestion_detail.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+<<<<<<< HEAD
+      <provider editor-type-id="text-editor">
+=======
     </entry>
 <<<<<<< HEAD
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/content/Intent.java">
@@ -3059,15 +3184,19 @@
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/SuggestionDetailFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -3204,12 +3333,24 @@
         <state vertical-scroll-proportion="-3.8">
           <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
 >>>>>>> c3687775f4c98157d7fd5edc4263bdd333f3d3f3
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_suggestion_detail.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+<<<<<<< HEAD
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="30.927273">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="e#2128#2158#0" expanded="true" />
+            <element signature="e#4865#4905#0" expanded="true" />
+          </folding>
+=======
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_submission.xml">
 <<<<<<< HEAD
@@ -3282,10 +3423,21 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+>>>>>>> 80e67a657a5742aa6978270533139e0de070bd17
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/twiscode/kubisadmin/StartupDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5167224">
+          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
+          <folding>
+            <element signature="e#3593#3824#0" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3870#4102#0" expanded="true" />
+            <element signature="e#4101#4102#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_promoted_user.xml">

@@ -69,21 +69,13 @@ public abstract class SuggestionFirebaseAdapter extends BaseAdapter {
                             mKeys.add(nextIndex, key);
                         }
                     }
+                    notifyDataSetChanged();
                 }
-                notifyDataSetChanged();
+
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                // One of the mModels changed. Replace it in our list and name mapping
-                String key = dataSnapshot.getKey();
-                Request newModel = dataSnapshot.getValue(SuggestionFirebaseAdapter.this.mModelClass);
-                if(newModel.getStatus()==0) {
-                    int index = mKeys.indexOf(key);
-
-                    mModels.set(index, newModel);
-                }
-
                 notifyDataSetChanged();
             }
 
@@ -92,12 +84,15 @@ public abstract class SuggestionFirebaseAdapter extends BaseAdapter {
 
                 // A model was removed from the list. Remove it from our list and the name mapping
                 String key = dataSnapshot.getKey();
-                int index = mKeys.indexOf(key);
+                Request newModel = dataSnapshot.getValue(SuggestionFirebaseAdapter.this.mModelClass);
+                if(newModel.getStatus()==0) {
+                    int index = mKeys.indexOf(key);
 
-                mKeys.remove(index);
-                mModels.remove(index);
+                    mKeys.remove(index);
+                    mModels.remove(index);
 
-                notifyDataSetChanged();
+                    notifyDataSetChanged();
+                }
             }
 
             @Override

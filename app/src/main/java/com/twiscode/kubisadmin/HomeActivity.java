@@ -1,5 +1,6 @@
 package com.twiscode.kubisadmin;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.Image;
@@ -49,11 +50,17 @@ public class HomeActivity extends AppCompatActivity implements CustomToolbarActi
     Toolbar toolbar;
     DatabaseReference database;
     FirebaseAuth mAuth;
+    ProgressDialog mAuthProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        mAuthProgressDialog = new ProgressDialog(this);
+        mAuthProgressDialog.setTitle("Loading");
+        mAuthProgressDialog.setMessage("Please Wait...");
+        mAuthProgressDialog.setCancelable(false);
+        mAuthProgressDialog.show();
         database = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -119,6 +126,7 @@ public class HomeActivity extends AppCompatActivity implements CustomToolbarActi
                     {
                         return;
                     }
+                    mAuthProgressDialog.dismiss();
                 }
 
                 @Override

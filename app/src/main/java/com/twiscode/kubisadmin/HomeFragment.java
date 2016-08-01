@@ -1,6 +1,7 @@
 package com.twiscode.kubisadmin;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -38,24 +39,37 @@ public class HomeFragment extends Fragment {
     DatabaseReference database;
     FirebaseAuth mAuth;
     FragmentManager fragmentManager;
+    ProgressDialog mAuthProgressDialog;
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
+    LayoutInflater inflater;
+    ViewGroup container;
+    Bundle savedInstanceState;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_home, container, false);
+        this.inflater=inflater;
+        this.container=container;
+        this.savedInstanceState=savedInstanceState;
+
         ButterKnife.bind(this, view);
         database = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
         fragmentManager = getFragmentManager();
+        mAuthProgressDialog = new ProgressDialog(getContext());
+        mAuthProgressDialog.setTitle("Loading");
+        mAuthProgressDialog.setMessage("Please Wait...");
+        mAuthProgressDialog.setCancelable(false);
+        mAuthProgressDialog.show();
 //        Query mRef, Class<Startup> mModelClass, int mLayout, Activity activity, Context context
         submissionAdapter=new ListAdapterSubmission(database.child("startups"),Startup.class,R.layout.item_submission,getActivity(),getContext());
         submissionView.setAdapter(submissionAdapter);
-
+        submissionAdapter.notifyDataSetChanged();
 //        database.child("startups").addChildEventListener(new ChildEventListener() {
 //            @Override
 //            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -99,6 +113,7 @@ public class HomeFragment extends Fragment {
 //        });
         if(submissionView != null)
         {
+            mAuthProgressDialog.dismiss();
             submissionView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
@@ -114,5 +129,29 @@ public class HomeFragment extends Fragment {
         }
         // Inflate the layout for this fragment
         return view;
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuthProgressDialog.show();
+        submissionAdapter=new ListAdapterSubmission(database.child("startups"),Startup.class,R.layout.item_submission,getActivity(),getContext());
+        submissionView.setAdapter(submissionAdapter);
+        submissionAdapter.notifyDataSetChanged();
+        if(submissionView!=null)
+        {
+            mAuthProgressDialog.dismiss();
+        }
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        mAuthProgressDialog.show();
+        submissionAdapter=new ListAdapterSubmission(database.child("startups"),Startup.class,R.layout.item_submission,getActivity(),getContext());
+        submissionView.setAdapter(submissionAdapter);
+        submissionAdapter.notifyDataSetChanged();
+        if(submissionView!=null)
+        {
+            mAuthProgressDialog.dismiss();
+        }
     }
 }

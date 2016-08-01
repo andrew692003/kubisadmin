@@ -124,6 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 newUser.setImageUrl(sdownload);
                                 newUser.setUsername(etUsername.getText().toString());
                                 newUser.setDescription(etDescription.getText().toString());
+                                newUser.setStatus(1L);
 
                                 usersRef.child(mUser.getUid()).setValue(newUser, new DatabaseReference.CompletionListener() {
                                     @Override

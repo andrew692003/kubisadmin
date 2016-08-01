@@ -14,7 +14,10 @@ import android.widget.BaseAdapter;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,7 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
     private List<T> mModels;
     private List<String> mKeys;
     private ChildEventListener mListener;
+    private DatabaseReference database;
 
 
     /**
@@ -51,6 +55,7 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
      * @param activity    The activity containing the ListView
      */
     public FirebaseListAdapter(Query mRef, Class<T> mModelClass, int mLayout, Activity activity) {
+        database = FirebaseDatabase.getInstance().getReference();
         this.mRef = mRef;
         this.mModelClass = mModelClass;
         this.mLayout = mLayout;
@@ -60,79 +65,144 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
         // Look for all child events. We will then map them to our own internal ArrayList, which backs ListView
         mListener = this.mRef.addChildEventListener(new ChildEventListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
+            public void onChildAdded(DataSnapshot dataSnapshot, final String previousChildName) {
 
-                T model = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
-                String key = dataSnapshot.getKey();
+                final T model = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
+                final String key = dataSnapshot.getKey();
+                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists())
+                        {
 
-                // Insert into the correct location, based on previousChildName
-                if (previousChildName == null) {
-                    mModels.add(0, model);
-                    mKeys.add(0, key);
-                } else {
-                    int previousIndex = mKeys.indexOf(previousChildName);
-                    int nextIndex = previousIndex + 1;
-                    if (nextIndex == mModels.size()) {
-                        mModels.add(model);
-                        mKeys.add(key);
-                    } else {
-                        mModels.add(nextIndex, model);
-                        mKeys.add(nextIndex, key);
+                        }
+                        else
+                        {
+                            Log.v("adastatus",key);
+                            // Insert into the correct location, based on previousChildName
+                            if (previousChildName == null) {
+                                mModels.add(0, model);
+                                mKeys.add(0, key);
+                            } else {
+                                int previousIndex = mKeys.indexOf(previousChildName);
+                                int nextIndex = previousIndex + 1;
+                                if (nextIndex == mModels.size()) {
+                                    mModels.add(model);
+                                    mKeys.add(key);
+                                } else {
+                                    mModels.add(nextIndex, model);
+                                    mKeys.add(nextIndex, key);
+                                }
+                            }
+                            notifyDataSetChanged();
+                        }
                     }
-                }
 
-                notifyDataSetChanged();
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 // One of the mModels changed. Replace it in our list and name mapping
-                String key = dataSnapshot.getKey();
-                T newModel = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
-                int index = mKeys.indexOf(key);
+                final String key = dataSnapshot.getKey();
+                final T newModel = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
+                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists())
+                        {
 
-                mModels.set(index, newModel);
+                        }
+                        else
+                        {
+                            int index = mKeys.indexOf(key);
+                            mModels.set(index, newModel);
+                            notifyDataSetChanged();
+                        }
+                    }
 
-                notifyDataSetChanged();
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
 
                 // A model was removed from the list. Remove it from our list and the name mapping
-                String key = dataSnapshot.getKey();
-                int index = mKeys.indexOf(key);
+                final String key = dataSnapshot.getKey();
+                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists())
+                        {
 
-                mKeys.remove(index);
-                mModels.remove(index);
+                        }
+                        else
+                        {
+                            int index = mKeys.indexOf(key);
+                            mKeys.remove(index);
+                            mModels.remove(index);
+                            notifyDataSetChanged();
+                        }
+                    }
 
-                notifyDataSetChanged();
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
             }
 
             @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String previousChildName) {
+            public void onChildMoved(DataSnapshot dataSnapshot, final String previousChildName) {
 
                 // A model changed position in the list. Update our list accordingly
-                String key = dataSnapshot.getKey();
-                T newModel = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
-                int index = mKeys.indexOf(key);
-                mModels.remove(index);
-                mKeys.remove(index);
-                if (previousChildName == null) {
-                    mModels.add(0, newModel);
-                    mKeys.add(0, key);
-                } else {
-                    int previousIndex = mKeys.indexOf(previousChildName);
-                    int nextIndex = previousIndex + 1;
-                    if (nextIndex == mModels.size()) {
-                        mModels.add(newModel);
-                        mKeys.add(key);
-                    } else {
-                        mModels.add(nextIndex, newModel);
-                        mKeys.add(nextIndex, key);
+                final String key = dataSnapshot.getKey();
+                final T newModel = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
+                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists())
+                        {
+
+                        }
+                        else
+                        {
+                            int index = mKeys.indexOf(key);
+                            mModels.remove(index);
+                            mKeys.remove(index);
+                            if (previousChildName == null) {
+                                mModels.add(0, newModel);
+                                mKeys.add(0, key);
+                            } else {
+                                int previousIndex = mKeys.indexOf(previousChildName);
+                                int nextIndex = previousIndex + 1;
+                                if (nextIndex == mModels.size()) {
+                                    mModels.add(newModel);
+                                    mKeys.add(key);
+                                } else {
+                                    mModels.add(nextIndex, newModel);
+                                    mKeys.add(nextIndex, key);
+                                }
+                            }
+                            notifyDataSetChanged();
+                        }
                     }
-                }
-                notifyDataSetChanged();
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
             }
 
             @Override
@@ -141,6 +211,7 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
             }
 
         });
+        notifyDataSetChanged();
     }
 
     public void cleanup() {

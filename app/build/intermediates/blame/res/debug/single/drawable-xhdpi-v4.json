@@ -92,12 +92,12 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\drawable-xhdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
-    },
-    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_insert_comment_white_18dp.png",
         "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-xhdpi\\ic_insert_comment_white_18dp.png"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png",
+        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
@@ -108,12 +108,12 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_dark_disabled.9.png"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_upvote_white.png",
-        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-xhdpi\\ic_upvote_white.png"
-    },
-    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\common_plus_signin_btn_text_light_focused.9.png",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-xhdpi-v4\\common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_upvote_white.png",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-xhdpi\\ic_upvote_white.png"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_close.png",

@@ -5,9 +5,9 @@ package com.twiscode.kubisadmin.POJO;
  */
 public class Request {
     String userid,deskripsi;
-    int status;
+    Long status;
 
-    Request(String userid, String deskripsi, int status)
+    Request(String userid, String deskripsi, Long status)
     {
         this.userid=userid;
         this.deskripsi=deskripsi;
@@ -15,11 +15,11 @@ public class Request {
     }
     Request(){}
 
-    public void setStatus(int status) {
+    public void setStatus(Long status) {
         this.status = status;
     }
 
-    public int getStatus() {
+    public Long getStatus() {
         return status;
     }
 

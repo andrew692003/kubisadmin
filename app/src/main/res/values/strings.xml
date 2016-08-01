@@ -6,6 +6,8 @@
     <string name="action_title">KUBIS</string>
     <string name="action_powered">Powered by Twiscode</string>
 
+    <string name="action_go_to_profile"><u>Go to profile ></u></string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="web_client_id">615935212797-ajbq4h2etkn1b3cdafcbfi1viu1hetcg.apps.googleusercontent.com</string>
