@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +39,7 @@ public class SuggestionFragment extends Fragment {
     FirebaseAuth mAuth;
 
     ProgressDialog mAuthProgressDialog;
+    SwipeRefreshLayout refresher;
 
     public SuggestionFragment() {
         // Required empty public constructor
@@ -47,23 +49,12 @@ public class SuggestionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mAuthProgressDialog = new ProgressDialog(getContext());
-        mAuthProgressDialog.setTitle("Loading");
-        mAuthProgressDialog.setMessage("Please Wait...");
-        mAuthProgressDialog.setCancelable(false);
-        mAuthProgressDialog.show();
         View view = inflater.inflate(R.layout.fragment_suggestion, container, false);
         ButterKnife.bind(this, view);
+        refresher = (SwipeRefreshLayout) view.findViewById(R.id.refresher);
         database = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
-        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class);
-        listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
-            @Override
-            public void onChanged() {
-                super.onChanged();
-                mAuthProgressDialog.dismiss();
-            }
-        });
+        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class, getContext());
         listSuggest.setAdapter(listAdapterSuggestion);
         listAdapterSuggestion.notifyDataSetChanged();
         if(listSuggest != null)
@@ -81,6 +72,24 @@ public class SuggestionFragment extends Fragment {
                 }
             });
         }
+        refresher.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class, getContext());
+                listSuggest.setAdapter(listAdapterSuggestion);
+                listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
+                    @Override
+                    public void onChanged() {
+                        super.onChanged();
+                        refresher.setRefreshing(false);
+                    }
+                });
+                if(listAdapterSuggestion.isEmpty())
+                {
+                    refresher.setRefreshing(false);
+                }
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
@@ -88,28 +97,14 @@ public class SuggestionFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class);
-        listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
-            @Override
-            public void onChanged() {
-                super.onChanged();
-                mAuthProgressDialog.dismiss();
-            }
-        });
+        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class, getContext());
         listSuggest.setAdapter(listAdapterSuggestion);
         listAdapterSuggestion.notifyDataSetChanged();
     }
     @Override
     public void onResume() {
         super.onResume();
-        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class);
-        listAdapterSuggestion.registerDataSetObserver(new DataSetObserver() {
-            @Override
-            public void onChanged() {
-                super.onChanged();
-                mAuthProgressDialog.dismiss();
-            }
-        });
+        listAdapterSuggestion=new ListAdapterSuggestion(database.child("request"), R.layout.item_submission, getActivity(), Request.class, getContext());
         listSuggest.setAdapter(listAdapterSuggestion);
         listAdapterSuggestion.notifyDataSetChanged();
     }

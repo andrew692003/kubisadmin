@@ -15,4 +15,6 @@
     <string name="action_logout_confirm">Are you sure?</string>
     <string name="dialog_exit">Log Out</string>
     <string name="dialog_no">No</string>
+    <string name="placeholder_name">Name</string>
+    <string name="placeholder_comment">Comment</string>
 </resources>

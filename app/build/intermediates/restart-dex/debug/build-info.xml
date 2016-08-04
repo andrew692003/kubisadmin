@@ -4,44 +4,30 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="1795703517688744"
-    token="4776200452225940239"
-    verifier="FIELD_REMOVED" >
+    timestamp="2026811359880716"
+    token="4776200452225940239" >
 
     <task
         name="javac"
-        duration="961" />
+        duration="1786" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="17" />
+        duration="119" />
     <task
         name="verifier"
-        duration="4" />
+        duration="21" />
 
     <artifact
-        location="D:\GitHub\kubisadmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-        type="DEX" />
-    <artifact
-        location="D:\GitHub\kubisadmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
+        location="D:\GitHub\kubisadmin\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="1795509845832147" >
+    <build timestamp="2026811359880716" >
         <artifact
             location="D:\GitHub\kubisadmin\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="1795703517688744"
-        verifier="FIELD_REMOVED" >
-        <artifact
-            location="D:\GitHub\kubisadmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
-        <artifact
-            location="D:\GitHub\kubisadmin\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

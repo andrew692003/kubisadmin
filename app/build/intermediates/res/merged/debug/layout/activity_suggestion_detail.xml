@@ -16,6 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:id="@+id/topBar">
 
@@ -24,7 +25,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/imageSuggest"
-                android:src="@drawable/chorong"
+                android:src="@drawable/avatar"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"/>
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/nameSuggest"
-                android:text="Chorong"
+                android:text="User"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 android:layout_centerHorizontal="true"
@@ -49,6 +50,7 @@
                 android:layout_marginTop="2.5dp"
                 android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
+                android:id="@+id/gotoProf"
                 android:text="@string/action_go_to_profile"
                 android:textAllCaps="false"
                 android:textStyle="normal"

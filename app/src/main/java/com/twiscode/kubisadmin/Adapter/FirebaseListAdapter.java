@@ -18,8 +18,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.twiscode.kubisadmin.MyApplication;
+import com.twiscode.kubisadmin.POJO.Startup;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,52 +38,67 @@ import java.util.List;
  * instance of your list item mLayout and an instance your class that holds your data. Simply populate the view however
  * you like and this class will handle updating the list as the data changes.
  *
- * @param <T> The class type to use as a model for the data contained in the children of the given Firebase location
  */
-public abstract class FirebaseListAdapter<T> extends BaseAdapter {
+public abstract class FirebaseListAdapter extends BaseAdapter {
 
     private Query mRef;
-    private Class<T> mModelClass;
+    private Class<Startup> mModelClass;
     private int mLayout;
     private LayoutInflater mInflater;
-    private List<T> mModels;
+    private List<Startup> mModels;
     private List<String> mKeys;
     private ChildEventListener mListener;
     private DatabaseReference database;
+    private Long limit;
 
 
     /**
      * @param mRef        The Firebase location to watch for data changes. Can also be a slice of a location, using some
      *                    combination of <code>limit()</code>, <code>startAt()</code>, and <code>endAt()</code>,
-     * @param mModelClass Firebase will marshall the data at a location into an instance of a class that you provide
      * @param mLayout     This is the mLayout used to represent a single list item. You will be responsible for populating an
      *                    instance of the corresponding view with the data from an instance of mModelClass.
      * @param activity    The activity containing the ListView
      */
-    public FirebaseListAdapter(Query mRef, Class<T> mModelClass, int mLayout, Activity activity) {
+    public FirebaseListAdapter(Query mRef, int mLayout, final Activity activity) {
         database = FirebaseDatabase.getInstance().getReference();
         this.mRef = mRef;
-        this.mModelClass = mModelClass;
         this.mLayout = mLayout;
         mInflater = activity.getLayoutInflater();
-        mModels = new ArrayList<T>();
+        mModels = new ArrayList<Startup>();
         mKeys = new ArrayList<String>();
+        final Long[] limit = {0L};
         // Look for all child events. We will then map them to our own internal ArrayList, which backs ListView
         mListener = this.mRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, final String previousChildName) {
-
-                final T model = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
+                final Startup model = dataSnapshot.getValue(Startup.class);
                 final String key = dataSnapshot.getKey();
                 database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists())
                         {
-
+                            final Calendar cal = Calendar.getInstance();
+                            cal.setTimeInMillis(model.getTimestamp());
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                            Date datefrommillis = cal.getTime();
+                            Date todaydate = new Date();
+                            try {
+                                todaydate = sdf.parse(sdf.format(new Date()));
+                                datefrommillis = sdf.parse(sdf.format(cal.getTime()));
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+                            Log.v("datefrommillis",datefrommillis.toString());
+                            Log.v("todaydate",todaydate.toString());
+                            if(datefrommillis.equals(todaydate) && (Boolean)dataSnapshot.getValue())
+                            {
+                                limit[0] = limit[0] + 1;
+                            }
                         }
                         else
                         {
+
                             Log.v("adastatus",key);
                             // Insert into the correct location, based on previousChildName
                             if (previousChildName == null) {
@@ -108,100 +129,21 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
                 // One of the mModels changed. Replace it in our list and name mapping
-                final String key = dataSnapshot.getKey();
-                final T newModel = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
-                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists())
-                        {
-
-                        }
-                        else
-                        {
-                            int index = mKeys.indexOf(key);
-                            mModels.set(index, newModel);
-                            notifyDataSetChanged();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
+                notifyDataSetChanged();
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
 
                 // A model was removed from the list. Remove it from our list and the name mapping
-                final String key = dataSnapshot.getKey();
-                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists())
-                        {
-
-                        }
-                        else
-                        {
-                            int index = mKeys.indexOf(key);
-                            mKeys.remove(index);
-                            mModels.remove(index);
-                            notifyDataSetChanged();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
+                notifyDataSetChanged();
 
             }
 
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, final String previousChildName) {
 
-                // A model changed position in the list. Update our list accordingly
-                final String key = dataSnapshot.getKey();
-                final T newModel = dataSnapshot.getValue(FirebaseListAdapter.this.mModelClass);
-                database.child("startupstatus").child(key).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists())
-                        {
-
-                        }
-                        else
-                        {
-                            int index = mKeys.indexOf(key);
-                            mModels.remove(index);
-                            mKeys.remove(index);
-                            if (previousChildName == null) {
-                                mModels.add(0, newModel);
-                                mKeys.add(0, key);
-                            } else {
-                                int previousIndex = mKeys.indexOf(previousChildName);
-                                int nextIndex = previousIndex + 1;
-                                if (nextIndex == mModels.size()) {
-                                    mModels.add(newModel);
-                                    mKeys.add(key);
-                                } else {
-                                    mModels.add(nextIndex, newModel);
-                                    mKeys.add(nextIndex, key);
-                                }
-                            }
-                            notifyDataSetChanged();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
+                notifyDataSetChanged();
 
             }
 
@@ -211,6 +153,7 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
             }
 
         });
+        ((MyApplication) activity.getApplication()).setLimit(limit);
         notifyDataSetChanged();
     }
 
@@ -242,7 +185,7 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
             view = mInflater.inflate(mLayout, viewGroup, false);
         }
 
-        T model = mModels.get(i);
+        Startup model = mModels.get(i);
         // Call out to subclass to marshall this model into the provided view
         populateView(view, model);
         return view;
@@ -257,6 +200,6 @@ public abstract class FirebaseListAdapter<T> extends BaseAdapter {
      * @param v     The view to populate
      * @param model The object containing the data used to populate the view
      */
-    protected abstract void populateView(View v, T model);
+    protected abstract void populateView(View v, Startup model);
 }
 

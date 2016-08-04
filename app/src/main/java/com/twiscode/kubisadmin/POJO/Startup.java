@@ -1,19 +1,23 @@
 package com.twiscode.kubisadmin.POJO;
 
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 
 /**
  * Created by Crusader on 7/29/2016.
  */
+@Parcel
 public class Startup {
-    String creatorId,description,linkUrl,name,thumbnail;
+    String creatorId,type,linkUrl,name,thumbnail,description;
     Boolean status,isDisplayed;
     ArrayList<String> founder,hashtag,imageUrl,upvoters;
     Long timestamp;
 
-    public Startup(String creatorId,String description,String linkUrl,String name, ArrayList<String> founder, ArrayList<String> hashtag, ArrayList<String> imageUrl, ArrayList<String> upvoters, Boolean status, Boolean isDisplayed, Long timestamp, String thumbnail)
+    public Startup(String creatorId,String type, String description,String linkUrl,String name, ArrayList<String> founder, ArrayList<String> hashtag, ArrayList<String> imageUrl, ArrayList<String> upvoters, Boolean status, Boolean isDisplayed, Long timestamp, String thumbnail)
     {
         this.creatorId=creatorId;
+        this.type=type;
         this.description=description;
         this.linkUrl=linkUrl;
         this.name=name;
@@ -37,6 +41,14 @@ public class Startup {
 
     public String getCreatorId() {
         return creatorId;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public void setDescription(String description) {
@@ -103,8 +115,8 @@ public class Startup {
         return upvoters;
     }
 
-    public void setDisplayed(Boolean displayed) {
-        isDisplayed = displayed;
+    public void setDisplayed(Boolean isDisplayed) {
+        this.isDisplayed = isDisplayed;
     }
 
     public Boolean getDisplayed() {

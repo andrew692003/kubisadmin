@@ -5,22 +5,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.squareup.picasso.Picasso;
+import com.twiscode.kubisadmin.POJO.User;
+
+import java.util.ArrayList;
+
 public class ThumbAdapter extends BaseAdapter {
 
-    private Integer[] mThumbIds;
+    private ArrayList<User> mThumbIds;
     private Context mContext;
 
-    public ThumbAdapter(Context c, Integer[] i) {
+    public ThumbAdapter(Context c, ArrayList<User> i) {
         mContext = c;
         mThumbIds = i;
     }
 
     public int getCount() {
-        return mThumbIds.length;
+        return mThumbIds.size();
     }
 
     public Object getItem(int position) {
-        return mThumbIds[position];
+        return mThumbIds.get(position);
     }
 
     public long getItemId(int position) {
@@ -40,7 +45,7 @@ public class ThumbAdapter extends BaseAdapter {
             imageView = (GridImageView) convertView;
         }
 
-        imageView.setImageResource(mThumbIds[position]);
+        Picasso.with(mContext).load(mThumbIds.get(position).getImageUrl()).into(imageView);
         return imageView;
     }
 

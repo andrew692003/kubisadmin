@@ -33,7 +33,7 @@ public class ListAdapterSuggestion extends SuggestionFirebaseAdapter {
      *                    instance of the corresponding view with the data from an instance of mModelClass.
      * @param activity    The activity containing the ListView
      */
-    public ListAdapterSuggestion(Query mRef, int mLayout, Activity activity, Class<Request> mModelClass) {
+    public ListAdapterSuggestion(Query mRef, int mLayout, Activity activity, Class<Request> mModelClass, Context context) {
         super(mRef, mLayout, activity, mModelClass);
         this.activity=activity;
         this.context=context;

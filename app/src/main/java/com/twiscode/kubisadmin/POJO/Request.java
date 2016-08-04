@@ -4,14 +4,15 @@ package com.twiscode.kubisadmin.POJO;
  * Created by Crusader on 8/1/2016.
  */
 public class Request {
-    String userid,deskripsi;
+    String userid,deskripsi,nominateid;
     Long status;
 
-    Request(String userid, String deskripsi, Long status)
+    Request(String userid, String deskripsi,String nominateid, Long status)
     {
         this.userid=userid;
         this.deskripsi=deskripsi;
         this.status=status;
+        this.nominateid=nominateid;
     }
     Request(){}
 
@@ -37,5 +38,13 @@ public class Request {
 
     public String getUserid() {
         return userid;
+    }
+
+    public void setNominateid(String nominateid) {
+        this.nominateid = nominateid;
+    }
+
+    public String getNominateid() {
+        return nominateid;
     }
 }

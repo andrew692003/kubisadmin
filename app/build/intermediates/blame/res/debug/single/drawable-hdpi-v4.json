@@ -208,12 +208,12 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-hdpi\\ic_action_close_white.png"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_avatar_color_56dp.png",
         "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\drawable-hdpi\\ic_avatar_color_56dp.png"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",

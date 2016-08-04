@@ -2,12 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.twiscode.kubisadmin.StartupMediaFragment">
+    android:background="@color/md_white_1000"
+    tools:context="com.twiscode.startuphunt.DetailMediaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--<ListView-->
+    <!--android:id="@+id/lvMedia"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMedia"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top" />
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progressBar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="@dimen/tall_margin"/>-->
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvNoData"
+        android:padding="@dimen/tall_margin"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No images available."/>
 
 </FrameLayout>

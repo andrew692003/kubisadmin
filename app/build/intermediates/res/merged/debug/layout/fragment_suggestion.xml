@@ -4,9 +4,14 @@
     android:layout_height="match_parent"
     tools:context="com.twiscode.kubisadmin.SuggestionFragment">
 
-    <ListView
+    <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listSuggest"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/refresher">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listSuggest"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </FrameLayout>

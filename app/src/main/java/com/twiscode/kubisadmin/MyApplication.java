@@ -10,6 +10,8 @@ import java.util.Locale;
  */
 public class MyApplication extends Application {
 
+    private Long[] limit={0L};
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -19,6 +21,14 @@ public class MyApplication extends Application {
         Configuration config = new Configuration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    public Long getLimit() {
+        return limit[0];
+    }
+
+    public void setLimit(Long[] limit) {
+        this.limit = limit;
     }
 
 }

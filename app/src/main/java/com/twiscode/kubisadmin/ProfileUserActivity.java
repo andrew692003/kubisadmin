@@ -1,5 +1,6 @@
 package com.twiscode.kubisadmin;
 
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 import com.twiscode.kubisadmin.POJO.User;
 
 import java.util.ArrayList;
@@ -28,7 +33,7 @@ import butterknife.ButterKnife;
 
 public class ProfileUserActivity extends AppCompatActivity {
 
-    @BindView(R.id.text_description)
+    @BindView(R.id.iniDeskripsi)
     TextView textDescription;
     @BindView(R.id.tab_layout)
     TabLayout tabLayout;
@@ -36,6 +41,8 @@ public class ProfileUserActivity extends AppCompatActivity {
     ViewPager viewPager;
     @BindView(R.id.namaJudul)
     TextView textNama;
+    @BindView(R.id.civProfilePicture)
+    ImageView imageProfile;
 
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
@@ -44,10 +51,15 @@ public class ProfileUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_user);
-        ButterKnife.bind(this);
-
+        ButterKnife.bind(this, this);
+        viewPager = (ViewPager) findViewById(R.id.tab_viewpager) ;
+        //Firebase.setAndroidContext(this);
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        String memberId = "default";
+        if(getIntent()!=null){
+            memberId = getIntent().getStringExtra("memberId");
+        }
 
         // TOOLBAR
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
@@ -59,28 +71,37 @@ public class ProfileUserActivity extends AppCompatActivity {
             ProfilePagerAdapter adapter = new ProfilePagerAdapter(getSupportFragmentManager());
 
             ProfileStartupFragment mProfileStartupFragment = new ProfileStartupFragment();
+            UpvotedPostsFragment mUpvotedPostsFragment = new UpvotedPostsFragment();
 
             Bundle mBundle = new Bundle();
-            mBundle.putString("memberID", "LRP2xkqObPRC3pRqrZxm0vyrdBf1");
+
+            mBundle.putString("memberID", memberId);
 
             mProfileStartupFragment.setArguments(mBundle);
+            mUpvotedPostsFragment.setArguments(mBundle);
 
             adapter.addFragment(mProfileStartupFragment, "Startups");
-
+            adapter.addFragment(mUpvotedPostsFragment, "Upvoted Startups");
             viewPager.setAdapter(adapter);
         }
 
         // TABLAYOUT
+        tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
+        setTitle("");
+        Log.v("memberIdProfileUser",memberId);
 
-        Query userRef = mDatabase.child("users").child("LRP2xkqObPRC3pRqrZxm0vyrdBf1");
+        Query userRef = mDatabase.child("users").child(memberId);
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()) {
                     User getUser = dataSnapshot.getValue(User.class);
                     textNama.setText(getUser.getName());
+                    Log.v("description",getUser.getDescription());
                     textDescription.setText(getUser.getDescription());
+                    if(getUser.getImageUrl()==null || getUser.getImageUrl().equals("")){}
+                    else Picasso.with(getApplicationContext()).load(getUser.getImageUrl()).into(imageProfile);
                 }
             }
 
@@ -122,5 +143,18 @@ public class ProfileUserActivity extends AppCompatActivity {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                //Intent j = new Intent(ChatActivity2.this, LobbyChatActivity.class);
+                //j.putExtra("username",mUsername);
+                //startActivity(j);
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

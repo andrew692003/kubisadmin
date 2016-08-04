@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.Login">
+            android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,10 +25,11 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".StartupDetailActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ProfileUserActivity"></activity>
+        <activity android:name=".ProfileUserActivity" />
         <activity android:name=".SearchUserActivity" />
-        <activity android:name=".SuggestionDetailActivity"></activity>
-        <activity android:name=".PromoteUserActivity"></activity>
+        <activity android:name=".SuggestionDetailActivity" />
+        <activity android:name=".PromoteUserActivity" />
+        <activity android:name=".DiscussionActivity"></activity>
     </application>
 
 </manifest>

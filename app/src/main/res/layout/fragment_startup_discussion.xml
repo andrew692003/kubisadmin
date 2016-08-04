@@ -1,13 +1,34 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.twiscode.kubisadmin.StartupDiscussionFragment">
+    android:orientation="vertical"
+    android:background="@color/md_white_1000"
+    tools:context="com.twiscode.kubisadmin.DiscussionActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--<include layout="@layout/header_detail_discussion"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lvDiscussion"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top" />
 
-</FrameLayout>
+    <!--<com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader-->
+    <!--android:id="@+id/rvDiscussionHeader"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_gravity="center_horizontal|top">-->
+
+    <!--<include layout="@layout/header_detail_discussion"/>-->
+
+    <!--</com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/tall_margin"/>
+
+</LinearLayout>

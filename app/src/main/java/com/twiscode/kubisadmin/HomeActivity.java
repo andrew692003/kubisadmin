@@ -103,27 +103,29 @@ public class HomeActivity extends AppCompatActivity implements CustomToolbarActi
                     User user = dataSnapshot.getValue(User.class);
                     if(user != null) {
                         if (user.getName() == null || user.getName().equals("")) {
-                            return;
+                            mAuthProgressDialog.dismiss();
                         } else {
 //                            Log.v("username",user.getName());
                             namaTextNav.setText(user.getName());
                         }
                         if (user.getDescription() == null || user.getDescription().equals("")) {
 //                            Log.v("useremailgaada","tidak ada phone");
-                            return;
+                            mAuthProgressDialog.dismiss();
                         } else {
 //                            Log.v("useremail",user.getPhone());
                             descTextNav.setText(user.getDescription());
                         }
+//                        Log.v("imageUrl",user.getImageUrl());
                         if (user.getImageUrl() == null || user.getImageUrl().equals("")) {
                             profPic.setImageResource(R.drawable.kubis);
-                            return;
+                            mAuthProgressDialog.dismiss();
                         } else {
                             Picasso.with(getApplicationContext()).load(user.getImageUrl()).into(profPic);
                         }
                     }
                     else
                     {
+                        mAuthProgressDialog.dismiss();
                         return;
                     }
                     mAuthProgressDialog.dismiss();
@@ -232,17 +234,6 @@ public class HomeActivity extends AppCompatActivity implements CustomToolbarActi
             for(int i = 0; i < fragmentManager.getBackStackEntryCount(); ++i) {
                 fragmentManager.popBackStackImmediate();
             }
-        }
-        else if (id == R.id.nav_promoted_user)
-        {
-            fragment = new PromotedUserFragment();
-            toolbarTitle.setText("Promoted User");
-            setActionBarTitle("Promoted User");
-            //startActivity(new Intent(this, ShopProfileActivity.class));
-        }
-        else if (id == R.id.nav_setting)
-        {
-            //startActivity(new Intent(this, ShopProfileActivity.class));
         }
         else if (id == R.id.nav_logout)
         {

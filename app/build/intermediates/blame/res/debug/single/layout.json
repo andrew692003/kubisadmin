@@ -28,12 +28,12 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\layout\\messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\divider_light.xml",
@@ -54,6 +54,10 @@
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\delete_credential.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.firebaseui\\firebase-ui-auth\\0.4.3\\res\\layout\\delete_credential.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\discussion_action_bar.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\discussion_action_bar.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
@@ -168,6 +172,10 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_discussion.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\activity_discussion.xml"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\forgot_password_layout.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.firebaseui\\firebase-ui-auth\\0.4.3\\res\\layout\\forgot_password_layout.xml"
     },
@@ -186,6 +194,10 @@
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_upvoted_posts.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\fragment_upvoted_posts.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search_user.xml",
@@ -240,16 +252,24 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_snackbar.xml"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_snackbar_include.xml"
-    },
-    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\save_credentials_layout.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.firebaseui\\firebase-ui-auth\\0.4.3\\res\\layout\\save_credentials_layout.xml"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_list_home.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\item_list_home.xml"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\header_detail_discussion.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\header_detail_discussion.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promoted_user.xml",
@@ -280,24 +300,36 @@
         "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\activity_home.xml"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_list_founder.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\item_list_founder.xml"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register_email_layout.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.firebaseui\\firebase-ui-auth\\0.4.3\\res\\layout\\register_email_layout.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_text.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\list_item_text.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
-        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\layout\\com_facebook_tooltip_bubble.xml"
-    },
-    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\layout\\com_facebook_tooltip_bubble.xml"
+    },
+    {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_media.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\list_item_media.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\email_hint_container_layout.xml",
@@ -326,6 +358,10 @@
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
         "source": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.11.0\\res\\layout\\com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_discussion.xml",
+        "source": "D:\\GitHub\\kubisadmin\\app\\src\\main\\res\\layout\\list_item_discussion.xml"
     },
     {
         "merged": "D:\\GitHub\\kubisadmin\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
